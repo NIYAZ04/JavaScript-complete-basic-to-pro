@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create & Append Elements</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+</head>
+<body>
+    <!-- // Example 1  -->
+<!--    
+<div id="container">
+<h2>Existing element</h2>
+
+
+</div> -->
+
+<button id="add-element">Add New Element</button>
+
+
+<p> Example 2 </p>
+<button id="show-message">Show Message</button>
+
+<p> Example 3 </p>
+
+<button id="add-card">Add Profile Card</button>
+    <div id="container"></div>
+
+
+    <script>
+     document.getElementById("add-element").addEventListener("click",function(){
+        let newParagraph=document.createElement("p");
+        newParagraph.textContent="I am New Paragraph";
+        document.getElementById("container").appendChild(newParagraph)
+     })
+
+
+     
+//Example 2
+document.getElementById("show-message").addEventListener("click",function(){
+    let notification = document.createElement("div");
+    notification.textContent="Success! Your action was completed "
+    notification.classList.add("notification")
+    document.body.appendChild(notification);
+
+    setTimeout(()=>{
+        notification.remove();
+
+    },3000)
+
+
+
+
+
+
+
+//Example 3
+
+    document.getElementById("add-card").addEventListener("click", function() {
+            let card = document.createElement("div");
+            card.classList.add("card");
+
+            let name = document.createElement("h3");
+            name.textContent = "John Doe";
+
+            let bio = document.createElement("p");
+            bio.textContent = "Full Stack Developer 🚀";
+
+            card.appendChild(name);
+            card.appendChild(bio);
+            document.getElementById("container").appendChild(card);
+        });
+
+})
+    </script>
+</body>
+</html>

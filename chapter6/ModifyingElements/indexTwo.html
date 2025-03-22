@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Modifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+        .big-text {
+            font-size: 24px;
+            color: blue;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="main-heading">Welcome to the DOM Playground</h1>
+        <p id="description">Click the buttons below to see modifications.</p>
+        <p id="info" data-note="initial">This paragraph has a <strong>data-note</strong> attribute.</p>
+
+        <button class="btn" id="change-text">Change Text</button>
+        <button class="btn" id="change-style">Change Style</button>
+        <button class="btn" id="toggle-class">Toggle Highlight</button>
+        <button class="btn" id="set-attribute">Set Attribute</button>
+        <button class="btn" id="get-attribute">Get Attribute</button>
+        <button class="btn" id="remove-attribute">Remove Attribute</button>
+    </div>
+
+    <script>
+        let heading = document.getElementById("main-heading");
+        let description = document.getElementById("description");
+        let info = document.getElementById("info");
+
+        //  innerHTML & textContent Example
+        document.getElementById("change-text").addEventListener("click", function() {
+            heading.innerHTML = "<em>DOM Playground Updated</em>";  // Italic text
+            description.textContent = "The text has been changed!";
+        });
+
+        //  Styling Elements
+        document.getElementById("change-style").addEventListener("click", function() {
+            info.style.fontSize = "22px";
+            info.style.color = "purple";
+            info.style.backgroundColor = "#e3f2fd";
+        });
+
+        //  Adding, Removing, and Toggling Classes
+        document.getElementById("toggle-class").addEventListener("click", function() {
+            heading.classList.toggle("highlight");
+            description.classList.toggle("big-text");
+        });
+
+        //  Set Attribute
+        document.getElementById("set-attribute").addEventListener("click", function() {
+            info.setAttribute("data-note", "Updated Note");
+            console.log("Attribute Set: ", info.getAttribute("data-note"));
+        });
+
+        //  Get Attribute
+        document.getElementById("get-attribute").addEventListener("click", function() {
+            let attrValue = info.getAttribute("data-note");
+            alert("data-note: " + attrValue);
+        });
+
+        //  Remove Attribute
+        document.getElementById("remove-attribute").addEventListener("click", function() {
+            info.removeAttribute("data-note");
+            console.log("Attribute Removed: ", info.getAttribute("data-note")); // Should be null
+        });
+
+    </script>
+
+</body>
+</html>

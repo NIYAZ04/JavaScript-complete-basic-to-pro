@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>replaceChild Example</title>
+</head>
+<body>
+    <p>replaceChild Example</p>
+    <div id="container">
+        <p id="old-text">This is an old paragraph.</p>
+    </div>
+    
+    <button id="replace-btn">Replace with Heading</button>
+
+    <script>
+        document.getElementById("replace-btn").addEventListener("click", function() {
+            let newHeading = document.createElement("h2");
+            newHeading.textContent = "This is the new heading!";
+            
+            let parent = document.getElementById("container");
+            let oldParagraph = document.getElementById("old-text");
+            
+            parent.replaceChild(newHeading, oldParagraph);
+        });
+    </script>
+</body>
+</html>

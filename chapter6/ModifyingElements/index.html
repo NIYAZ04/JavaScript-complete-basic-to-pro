@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying Elements</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <h1 id="main-heading">Original Heading</h1>
+    <p id="text">This is a sample paragraph</p>
+    <button id="change-text">Change Text</button>
+    <button id="change-style">Change Style</button>
+    <button id="toggle-class">Toggle Highlight</button>
+    <button id="set-attribute">Set Attribute</button>
+    <button id="get-attribute">Get Attribute</button>
+    <button id="remove-attribute">Remove Attribute</button>
+
+
+
+    <script>
+let heading =document.getElementById("main-heading");
+let paragraph=document.getElementById("text");
+
+// innerHTML -> changes the entire HTML inside an element 
+document.getElementById("change-text").addEventListener("click",function(){
+    heading.innerHTML="<em>Updated Heading</em>";
+    paragraph.textContent="This text was changed dynamically"
+})
+
+// changing style using element.style.property
+
+document.getElementById("change-style").addEventListener("click",function(){
+    paragraph.style.color="blue";
+    paragraph.style.fontSize ="30px"
+    paragraph.style.backgroundColor="#f4f4f4"
+
+});
+
+// classList manipulation (add,remove,toggle)
+document.getElementById("toggle-class").addEventListener("click",function(){
+    heading.classList.toggle("highlight");
+});
+
+// setAttribute - add/modifies an attribute 
+
+document.getElementById("set-attribute").addEventListener("click",function(){
+    paragraph.setAttribute("data-info","Dynamic Attribute Added");
+    console.log("Attribtue Set :", paragraph.getAttribute("data-info"))
+})
+
+document.getElementById("get-attribute").addEventListener("click", function() {
+    let attrValue = paragraph.getAttribute("data-info");
+    let displayArea = document.getElementById("attribute-display"); // Create a div for displaying
+    if (!displayArea) {
+        displayArea = document.createElement("div");
+        displayArea.id = "attribute-display";
+        document.body.appendChild(displayArea);
+    }
+    if (attrValue) {
+        displayArea.textContent = "data-info: " + attrValue;
+    } else {
+        displayArea.textContent = "data-info attribute does not exist.";
+    }
+})
+
+//removeAttribute 
+document.getElementById("remove-attribute").addEventListener("click",function(){
+    paragraph.removeAttribute("data-info");
+    console.log("attribute Removed : ",paragraph.getAttribute("data-info"))
+})
+
+
+    </script>
+
+</body>
+</html>
+

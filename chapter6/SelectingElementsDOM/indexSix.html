@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px;
+            border: 1px solid gray;
+            margin: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Closest(), parentElement, Children, nextElementSibling
+        and previousElementSibling</p>
+
+    <div class="container">
+        <h2>Click the button to find the closest container</h2>
+        <button class="check-closest">find closest container</button>
+    </div>
+
+    <div class="container">
+        <h3>Click an item to explore relations</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+
+
+    <script>
+// closest(selector) : finding the closest .container
+document.querySelector(".check-closest").addEventListener("click",function(){
+    let closestContainer =this.closest(".container");
+    closestContainer.classList.add("highlight")
+    setTimeout(()=>closestContainer.classList.remove("highlight"),1000);
+    console.log("closest Container: ",closestContainer)
+})
+
+
+// parentElement, Children , nextElementSibling, previousElementSibling
+document.querySelectorAll("li").forEach(item=>{
+    item.addEventListener("click",function(){
+        // parentElement
+        let parent=this.parentElement;
+        console.log("parent Element: ", parent)
+        // children
+
+        let children=parent.children;
+        console.log("All children of parent  :",children)
+
+        //nextElementSibling
+        let nextSibling = this.nextElementSibling;
+        if(nextSibling){
+            nextSibling.classList.add("highlight");
+            setTimeout(()=> nextSibling.classList.remove("hightliht"),2000);
+
+        }else{
+            console.log("no Next Sibling")
+        }
+
+// previousElementSibling
+        let prevSibling = this.previousElementSibling;
+        if(prevSibling){
+            prevSibling.classList.add("highlight");
+            setTimeout(()=> prevSibling.classList.remove("hightliht"),2000);
+            console.log("previous Sibling",prevSibling)
+        }else{
+            console.log("no Next Sibling")
+        }
+    })
+})
+
+    </script>
+
+
+</body>
+
+</html>

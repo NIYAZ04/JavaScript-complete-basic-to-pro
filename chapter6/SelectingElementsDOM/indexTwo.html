@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+   
+</head>
+<body style="background-color: #333 ; color: white;">
+<p>getElementByClassName </p>
+
+<p class="info">Student1</p>
+<p class="info">Student2</p>
+<p class="info">Student3</p>
+<p class="info">Student4</p>
+<p class="info">Student5</p>
+
+<button onclick="highlight()">Highlight All</button>
+
+
+
+<p>Example 2 </p>
+
+<p class="itemss">item1</p>
+<p class="itemss">item2</p>
+<p class="itemss">item3</p>
+
+<button id="changeTextBtn">Change Text</button>
+
+
+
+<p>Example 3 </p>
+
+
+<p class="item">item 1</p>
+<p class="item">item 2</p>
+<p class="item">item 3</p>
+<p class="item">item 1</p>
+<p class="item">item 2</p>
+<p class="item">item 3</p>
+<button id="converter">convert & log</button>
+<script>
+
+function highlight(){
+    let elements=document.getElementsByClassName("info");
+    for(let item of elements){
+          item.style.backgroundColor ="yellow"
+    }
+    
+}
+
+document.getElementById("changeTextBtn").addEventListener("click",function(){
+    let itemss=document.getElementsByClassName("itemss");
+    for(let i =0;i<itemss.length;i++){
+        itemss[i].textContent="Updated Item"+(i+1);
+      
+    }
+
+})
+
+document.getElementById("converter").addEventListener("click", function(){
+    let items=document.getElementsByClassName("item");
+    let itemsArray=Array.from(items);
+    itemsArray.forEach(items=>{
+        items.style.color="red";
+    })
+    console.log(itemsArray)
+})
+
+</script>
+
+
+</body>
+</html>

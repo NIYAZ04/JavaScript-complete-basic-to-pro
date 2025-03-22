@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Elements</title>
+    
+</head>
+<body>
+    <h1>Remove Elements</h1> 
+    <h4>RemoveChild()</h4> 
+   <div id="list">
+    <p id="item1">item 1
+        <button onclick="removeItem()">Remove</button>
+    </p>
+   </div> 
+   <button id="delete-btn">Remove me</button>
+    <script >
+function removeItem(){
+    let parent=document.getElementById("list");
+    let child =document.getElementById("item1")
+    parent.removeChild(child);
+}
+document.getElementById("delete-btn").addEventListener("click",function(){
+    this.remove();
+})
+
+    </script>
+</body>
+</html>

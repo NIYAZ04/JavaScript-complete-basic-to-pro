@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+   
+</head>
+<body style="background-color: #333 ; color: white;">
+ <h2>getElementsByTagName</h2>
+ <p>First paragraph</p>
+ <p>Second paragraph</p>
+ <p>Third paragraph</p>
+   
+<button onclick="changeAll()">Make UpperCase</button>
+<script>
+
+function changeAll(){
+    let paragraph= document.getElementsByTagName("p");
+    for(let para of paragraph){
+        para.style.textTransform="uppercase";
+        
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+    
+</head>
+<body>
+    <p>insertAdjacentHTML</p>
+  <h2 id="title">Welcome</h2>  
+  <button id="insert">Insert HTML</button>
+
+    <script>
+document.getElementById("insert").addEventListener("click",function(){
+    document.getElementById("title").insertAdjacentHTML("afterend","<p> New Paragraph Added after the title</p>")
+})
+    </script>
+</body>
+</html>

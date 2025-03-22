@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+   
+</head>
+<body style="background-color: #333 ; color: white;">
+ <p>getElementByID</p>
+    <h1 id="main-title">Hello World</h1>
+<button onclick="changeTitle()">Change Button</button>
+
+<button id="bgchangeBtn">Change Background</button>
+
+<script>
+function changeTitle(){
+let titile = document.getElementById("main-title");
+titile.textContent="Hello Tekneikos"
+
+}
+
+
+document.getElementById("bgchangeBtn").addEventListener("click",function(){
+   document.body.style.backgroundColor="red" 
+})
+
+</script>
+
+
+</body>
+</html>

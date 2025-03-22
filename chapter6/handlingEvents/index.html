@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Handling Events</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .box { width: 200px; height: 100px; background: lightblue; text-align: center; line-height: 100px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h2>Event Handling Example</h2>
+
+    <!-- Button Click Event -->
+    <button id="click-btn">Click Me</button>
+    <p id="click-msg"></p>
+
+    <!-- Mouse Events -->
+    <div id="hover-box" class="box">Hover over me</div>
+
+    <!-- Keyboard Event -->
+    <input type="text" id="keyboard-input" placeholder="Type something..." />
+    <p id="key-msg"></p>
+
+    <!-- Form Events -->
+    <form id="form">
+        <label>Choose a color:
+            <select id="color-select">
+                <option value="">Select</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+            </select>
+        </label>
+        <p id="color-msg"></p>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Window Events -->
+    <p id="resize-msg"></p>
+
+
+
+
+    <script>
+      
+// Click Event 
+document.getElementById("click-btn").addEventListener("click",function(){
+    document.getElementById("click-msg").textContent="button clicked"
+})
+
+//mouse event 
+
+let hoverBox=document.getElementById("hover-box");
+hoverBox.addEventListener("mouseover",function(){
+    hoverBox.style.backgroundColor = "yellow";
+    hoverBox.textContent = "Mouse Over!"
+})
+
+// keyborad Events 
+document.getElementById("keyboard-input").addEventListener("keydown",function(){
+    document.getElementById("key-msg")
+.textContent=`you pressed: ${event.key}`
+})
+
+
+// form Events 
+
+document.getElementById("color-select").addEventListener("change", function() {
+            document.getElementById("color-msg").textContent = `Selected Color: ${this.value}`;
+        })
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert(" Form Submitted!");
+        });
+
+
+window.addEventListener("resize",function(){
+    document.getElementById("resize-msg").textContent = `Window Width: ${window.innerWidth}px`
+})
+
+    </script>
+
+
+
+</body>
+</html>

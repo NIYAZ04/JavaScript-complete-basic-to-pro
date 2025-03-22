@@ -1,0 +1,87 @@
+                        JavaScript in One Video by Tekneikos
+🔹 1. Introduction to JavaScript
+    What is JavaScript and what are the features?
+    Setting up Environment (Node.js, Browser Console)
+    
+🔹 2. JavaScript Basics
+    Basic Syntax and Structure
+    Data Types & Variables (var, let, const)
+    Hoisting (Variables & Functions)
+    Type Coercion & Type Conversion
+    Operators (Arithmetic, Logical, Bitwise, Ternary)
+
+🔹 3. Control Flow & Loops
+
+    Conditional Statements (if-else, switch)
+    Loops:
+        for, while, do-while
+        for...in vs for...of
+    Break & Continue
+    Labeled Statements
+
+🔹 4. Functions & Scope
+    Function Declaration vs Expression
+    Arrow Functions
+    Higher-Order Functions ()
+    Closures & Lexical Scope / Dynamic Scope
+    Callbacks (Sync vs Async Execution)
+
+🔹 5. Arrays & Strings
+
+    Array Methods (map(), filter(), reduce(), sort(), etc.)
+    Set & Map Objects
+    weakmap weakset
+    flatmap
+    String Methods (split(), slice(), substring(), indexOf(), etc.)
+    Array Destructuring
+
+
+🔹 6. DOM Manipulation & Event Handling
+Introduction to DOM
+What is DOM 
+How the browser interprets HTML & creates the DOM
+Understanding DOM TREE Structure 
+DOM Manipulation
+    Selecting Elements
+    Modifying Elements
+    Creating & Removing Elements
+    Handling Events
+why not innerHTML and use innerAdjecentHTML 
+
+
+🔹 7. Objects & OOP in JavaScript
+
+    Objects & Object Methods
+    Prototypes & Prototype Chain
+    Classes & Objects (ES6)
+    Constructors & Destructors
+    Inheritance in JavaScript
+
+🔹 8. Advanced JavaScript Features
+
+    ES6 Features
+        Template Literals
+        Destructuring (Array & Object)
+        Spread & Rest Operators
+        Optional Chaining (?.)
+        default Parameters
+    Modules (import / export) 
+    Memory Management & Garbage Collection
+
+
+🔹 9. Asynchronous JavaScript
+
+    Event Loop & Microtask Queue
+    Callbacks (Handling Async Operations)
+    Promises (.then(), .catch(), .finally())
+    Async/Await (Handling API calls efficiently)
+    Error Handling (try-catch, .catch())
+     
+     
+
+      
+     // call signature contructure signature
+    
+   //   differ Async  in js with script tag why important 
+  
+ //     interpreter compiler (akshai seni how JS works)
