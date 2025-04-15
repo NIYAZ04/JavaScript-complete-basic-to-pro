@@ -57,31 +57,37 @@ why not innerHTML and use innerAdjecentHTML
     Constructors & Destructors
     Inheritance in JavaScript
 
-🔹 8. Advanced JavaScript Features
 
+🔹 8. Modern JavaScript Esstentials
     ES6 Features
-        Template Literals
-        Destructuring (Array & Object)
-        Spread & Rest Operators
-        Optional Chaining (?.)
-        default Parameters
+    Template Literals
+    Destructuring (Array & Object)
+    Spread & Rest Operators
+    Optional Chaining (?.)
+    default Parameters
+        Arrow Functions (Chapter 4)
+        Sets and Maps   (Chapter 5)
+        Classes         (Chapter 7)
     Modules (import / export) 
-    Memory Management & Garbage Collection
 
+ 
 
-🔹 9. Asynchronous JavaScript
-
-    Event Loop & Microtask Queue
-    Callbacks (Handling Async Operations)
-    Promises (.then(), .catch(), .finally())
+🔹 9. Asynchronous JavaScript (important)
+    Introduction to Asynchronous
+    Difference between Syncronous / Asynchronous with examples
+    how to know if the program is Asynchronous
+    Event Loops, & Microtask macrotask Queue , callstack 
+    Callbacks (Handling Async Operations) // Callback hell (drawback inversion of control)
+    XMLHttpRequest (why not in use much)
+    Promises (.then(), .catch(), .finally()) .any .all .race .allsettle
     Async/Await (Handling API calls efficiently)
     Error Handling (try-catch, .catch())
-     
-     
+    which one should we use promise or Async/Await
 
-      
-     // call signature contructure signature
-    
-   //   differ Async  in js with script tag why important 
-  
- //     interpreter compiler (akshai seni how JS works)
+
+
+
+
+
+
+
